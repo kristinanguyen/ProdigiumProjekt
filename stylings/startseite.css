@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding:0;
+   
+ 
+}
+.wrapper{
+    width:1200px;
+    margin:auto;
+    height: 50px;
+  
+}
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.438),rgba(121, 53, 53, 0.384)),url("bgr.png");
+    height: 100vh;
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: relative;
+    position: relative;
+
+}
+
+.nav-area li{
+    float: left;
+    list-style: none;
+    margin-top: 30px;
+    padding:0;
+   
+  
+
+}
+
+.nav-area li{
+    float:left;
+   
+}
+.nav-area li a{
+    display: inline-block;
+   
+    text-decoration: none;
+    color: #fff;
+      opacity: .8;
+    line-height: 40px;
+    text-align: center;
+    font-size: 45px;
+  
+    padding: 14px 16px;
+    
+}
+.nav-area li a:hover {
+    background-color: #fff;
+    color:#333;
+}
+
+
+.nav-area li ul li {
+    display: none;
+
+}
+.nav-area li:hover ul li{
+  
+    color: #fff;
+    
+    display:inline-block;
+}
+
+.logo img{
+    width: 200px;
+    float: left;
+    height: 0%;
+}
+.welcome-text{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    margin: 12% 32%;
+    text-align: center;
+   
+}
+.welcome-text h1{
+  position: relative;
+  font-size: 90px;
+  color: #fff;
+  text-shadow: 2px 2px black;
+  font-family: myFirstFont;
+  text-align: center;
+  padding:50px;
+  width: 100%;
+  height: auto;
+}
+.welcome-text a{
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display:inline-block;
+    color: #fff;
+
+}
+
+.welcome-text a:hover{
+    
+    color: #333;
+}
+
+
+.nav-area li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .nav-area li a:hover, .dropdown:hover .dropbtn {
+    background-color:rgba(209, 94, 94, 0.644);
+  }
+  
+  .nav-area li.dropdown {
+    display: inline-block;
+  }
+  
+  .nav-area .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(99, 66, 66);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .nav-area .dropdown-content a {
+    color:#fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .nav-area .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .nav-area .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .demons img{
+
+    width: 500px;
+    float: left;
+    height: 0%;
+    margin: 5% 0% 0% 0% ;
+
+  }
+
+  .flug img{
+
+    width: 430px;
+    float: left;
+    height: 0%;
+    margin: 5% 0% 0% 0% ;
+
+  }
+  @font-face {
+    font-family: myFirstFont;
+    src: url(Beautiful\ Things\ Demo.ttf);
+  }
+  
+  div {
+    font-family: myFirstFont;
+  }
+ 
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

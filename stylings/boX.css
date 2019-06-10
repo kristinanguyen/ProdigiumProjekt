@@ -1,0 +1,140 @@
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Beautiful\ Things\ Demo.ttf);
+  }
+  
+  div {
+    font-family: myFirstFont;
+  }
+#section1{
+    background:linear-gradient(rgba(34, 12, 12, 0.767),rgba(34, 9, 9, 0.623)),url("bgr.png");
+    color: #fff;
+    height: 700px;
+}
+
+
+
+div.gallery:hover {
+  border: 2px solid rgb(255, 255, 255);
+  
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 20px;
+  text-align: center;
+  font-size: 3rem;
+  background: rgba(155, 33, 33, 0.226);
+}
+
+
+* {
+  box-sizing: border-box;
+  
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+  #section2 {
+    height: 700px;
+    background:linear-gradient(rgba(134, 42, 42, 0.438),rgba(155, 59, 59, 0.26)),url("bgr.png");
+    background-position-y: 700px;
+  }
+  .scroll{
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    display:inline-block;
+    color: #fff;
+    position: absolute;
+    width: 150px;
+    height: auto;
+    margin: 0.5% 44%;
+    text-align: center;
+  }
+  .scroll a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+  }
+  .scroll a:hover{
+    
+    color: #333;
+}
+
+  h2{
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 2px 2px black;
+    font-family: myFirstFont;
+    font-size: 5rem;
+    text-align: center;
+    padding:50px;
+  }
+
+  p{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px black;
+  }
+
+  .scroll2{
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    display:inline-block;
+    color: #fff;
+    position: absolute;
+    width: 150px;
+    height: auto;
+    margin: 0.5% 45%;
+    text-align: center;
+  }
+  .scroll2 a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+  }
+  .scroll2 a:hover{
+    
+    color: #333;
+}
+#credits {
+  height: 700px;
+  background:linear-gradient(rgb(0, 0, 0),rgba(155, 59, 59, 0.26)),url("bgr.png");
+  background-position-y: 700px;
+}

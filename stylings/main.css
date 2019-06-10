@@ -1,0 +1,121 @@
+body{
+    background: linear-gradient(rgba(176, 197, 170, 0.575),rgba(27, 114, 24, 0.486)), url(bgr.png);
+    background-repeat: none;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(Beautiful\ Things\ Demo.ttf);
+  }
+  
+  div {
+    font-family: myFirstFont;
+  }
+ 
+
+* {
+    box-sizing: border-box;
+    
+  }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 50%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgb(44, 160, 106);
+    color: white;
+    font-weight: 100;
+    font-size: 3rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    font-family: myFirstFont;
+
+}
+
+.button:hover {
+    background-color: rgb(73, 201, 101);
+}
+.buttonANAB {
+    background-color:rgba(218, 111, 111, 0.178);
+    color:white;
+    border: 1.5px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 45px;
+    margin: 35px 0 0 20rem;
+    display:inline-block;
+    font-family: myFirstFont;
+    transition: background-color 0.2s ease;
+    font-weight: 100;
+    width: 35%;
+    height: auto;
+
+}
+.buttonANAB:hover {
+    background-color: rgba(131, 34, 34, 0.384);
+    opacity: 1;
+}
+
+
+.card {
+    max-width: 70vw;
+    min-width: 400px;
+    margin: 10rem auto;
+    padding: 3rem;
+    background:url(lo.png);
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.headline {
+    margin-bottom: 2rem;
+    font-size: 8rem;
+    font-weight: bolder;
+ 
+}
+
+.error {
+    font-size: 2rem;
+    font-weight: bold;
+    color:rgb(190, 21, 21);
+} 
+
+.regis{
+    font-size: 33px;
+}
+
+.close {
+    position: absolute;
+    right: 240px;
+    top: 150px;
+    color: #000;
+    font-size: 110px;
+    font-weight: bold;
+  }
+  .close a{
+      color: rgb(168, 30, 30);
+      text-decoration: none;
+      
+  }
+  .close:hover,
+.close:focus {
+  color: rgb(114, 25, 25);
+  cursor: pointer;
+}
