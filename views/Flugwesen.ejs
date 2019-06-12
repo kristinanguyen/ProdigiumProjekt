@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Flugwesen</title>
+      <link href='flug.css' rel='stylesheet'>
+      
+      <div class="wrapper">
+        <div class="logo">
+          <a href="/home"><img src="log.png" alt="logo"></a>
+        </div>
+        <ul class="nav-area"><!--Quelle(nav-bar):https://www.w3schools.com/howto/howto_js_topnav.asp-->
+          <li><a href="/home">Startseite</a></li>
+          <li class="dropdown"><!--Quelle(Dropdown):https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+            <a href="/home#section1" class="dropbtn">Prodigium-Box</a><!--Quelle(#section1): https://www.w3schools.com/howto/howto_css_smooth_scroll.asp-->
+            <div class="dropdown-content">
+              <a href="/daemonen">Dämonen</a>
+              <a href="/natur">Naturgeister</a>
+              <a href="/Wasserwesen">Wasserwesen</a>
+              <a href="/Flugwesen">Flugwesen</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="/konto" class="dropbtn">Mein Profil</a>
+            <div class="dropdown-content">
+              <a href="/konto">Konto</a>
+            </div>
+          </li>
+          <li><a href="/home#credits">Credits</a></li> 
+          <% if (isLoggedIn) { %> 
+            <form action="/logout" method="POST">
+              <button class ="buttonANAB" type="submit">Abmelden</button>
+            </form>
+          <% } else { %>  
+            <form action="/login" method="POST">
+              <button class ="buttonANAB" type="submit">Anmelden</button>
+            </form>
+            <% } %>
+          </ul>
+          </div>
+          <div class="logo1"><img src="FlugwesenLogo.png"></div>
+          <div class="h1"><h1>Flugwesen</h1></div>
+        </head>
+<body>
+  
+  <div class="tab"><!--Quelle(tablinks):https://www.w3schools.com/howto/howto_js_tabs.asp-->
+    <button class="tablinks" onclick="openCity(event, 'Amphisbaena')" id="defaultOpen"><h2>Amphisbaena</h2></button>
+    <button class="tablinks" onclick="openCity(event, 'Cito')"><h2>Cito</h2></button>
+    <button class="tablinks" onclick="openCity(event, 'Griffon')"><h2>Griffon</h2></button>
+    <button class="tablinks" onclick="openCity(event, 'Harpia')"><h2>Harpia</h2> </button>
+    <button class="tablinks" onclick="openCity(event, 'Infernum')"><h2>Infernum</h2> </button>
+    <button class="tablinks" onclick="openCity(event, 'Iris')" ><h2>Iris</h2></button>
+    <button class="tablinks" onclick="openCity(event, 'Lamassu')" ><h2>Lamassu</h2></button>
+    <button class="tablinks" onclick="openCity(event, 'Malum')"><h2>Malum</h2> </button>
+    <button class="tablinks" onclick="openCity(event, 'Nigrum')"><h2>Nigrum</h2></button>
+    <button class="tablinks" onclick="openCity(event, 'Pegasus')"><h2>Pegasus</h2></button>
+</div>
+<form><input type="image" src="LogoFavoriten.png" alt="Stern als button" class="star"></form><!--Quelle(Stern):https://wiki.selfhtml.org/wiki/HTML/Formulare/input/button-->
+
+
+  <div id="Amphisbaena" class="tabcontent">
+  
+  <h1><%= flg[0].name %> </h1> <br>
+  <img src="Amphisbaena.png"><!--Quelle(Bild):https://static.wixstatic.com/media/1b674c_8cac5538c2dd466b9186260390bbc238~mv2.jpg-->
+  <p><%= flg[0].eigen %><br>
+    <%= flg[0].ort %> <br>
+    <%= flg[0].staerke %><br>
+    <%= flg[0].schwaeche %> <br>
+    <%= flg[0].tipps %></p><br>
+
+  </div>
+
+  <div id="Cito" class="tabcontent">
+  
+  <h1><%= flg[1].name %> </h1> <br>
+  <img src="Cito.png"><!--Quelle(Bild):https://pin.it/3sq5fg77cwyoq3-->
+  <p><%= flg[1].eigen %><br>
+    <%= flg[1].ort %> <br>
+    <%= flg[1].staerke %><br>
+    <%= flg[1].schwaeche %> <br>
+    <%= flg[1].tipps %></p><br>
+
+</div>
+
+  <div id="Griffon" class="tabcontent">
+  
+  <h1><%= flg[2].name %> </h1> <br>
+  <img src="Griffon.png"><!--Quelle(Bild):https://www.etsy.com/de/listing/565258832/antike-griffin-kunstdruck-griffon-greif-->
+  <p><%= flg[2].eigen %><br>
+    <%= flg[2].ort %> <br>
+    <%= flg[2].staerke %><br>
+    <%= flg[2].schwaeche %> <br>
+    <%= flg[2].tipps %></p><br>
+  
+  </div>
+
+<div id="Harpia" class="tabcontent">
+  
+  <h1><%= flg[3].name %> </h1> <br>
+  <img src="Harpia.png"><!--Quelle(Bild):http://bit.ly/2ZhBugN-->
+  <p><%= flg[3].eigen %><br>
+    <%= flg[3].ort %> <br>
+    <%= flg[3].staerke %><br>
+    <%= flg[3].schwaeche %> <br>
+    <%= flg[3].tipps %></p><br>
+  
+  </div>
+
+  <div id="Infernum" class="tabcontent">
+    <h1><%= flg[4].name %> </h1> <br>
+    <img src="Infernum.png"><!--Quelle(Bild): https://pin.it/ogqv6disisbxyv-->
+    <p><%= flg[4].eigen %><br>
+        <%= flg[4].ort %> <br>
+        <%= flg[4].staerke %><br>
+        <%= flg[4].schwaeche %> <br>
+        <%= flg[4].tipps %></p><br>
+      
+  </div>
+  
+  <div id="Iris" class="tabcontent">
+    
+    <h1><%= flg[5].name %> </h1> <br>
+    <img src="Iris.png"><!--Quelle(Bild):https://pin.it/ugt37w2o44clgr-->
+    <p><%= flg[5].eigen %><br>
+      <%= flg[5].ort %> <br>
+      <%= flg[5].staerke %><br>
+      <%= flg[5].schwaeche %> <br>
+      <%= flg[5].tipps %></p><br>
+    </div>
+
+<div id="Lamassu" class="tabcontent">
+  
+  <h1><%= flg[6].name %> </h1> <br>
+  <img src="Lamassu.png"><!--Quelle(Bild):https://www.sciencesource.com/archive/Lamassu--Assyrian-Protective-Deity-SS2571865.html-->
+  <p><%= flg[6].eigen %><br>
+    <%= flg[6].ort %> <br>
+    <%= flg[6].staerke %><br>
+    <%= flg[6].schwaeche %> <br>
+    <%= flg[6].tipps %></p><br>
+  
+  </div>
+ 
+  <div id="Malum" class="tabcontent">
+
+    <h1><%= flg[7].name %> </h1> <br>
+    <img src="Malum.png"><!--Quelle(Bild):https://www.deviantart.com/benu-h/art/Huginn-and-Muninn-559638362-->
+    <p><%= flg[7].eigen %><br>
+      <%= flg[7].ort %> <br>
+      <%= flg[7].staerke %><br>
+      <%= flg[7].schwaeche %> <br>
+      <%= flg[7].tipps %></p><br>
+
+    </div>
+    
+    <div id="Nigrum" class="tabcontent">
+      
+      <h1><%= flg[8].name %> </h1> <br>
+      <img src="Nigrum.png"><!--Quelle(Bild):https://pin.it/cd2szgvugjkv3m-->
+      <p><%= flg[8].eigen %><br>
+        <%= flg[8].ort %> <br>
+        <%= flg[8].staerke %><br>
+        <%= flg[8].schwaeche %> <br>
+        <%= flg[8].tipps %></p><br>
+      </div>
+      
+      <div id="Pegasus" class="tabcontent">
+        
+        <h1><%= flg[9].name %> </h1> <br>
+        <img src="Pegasus.png"><!--Quelle(Bild):https://pin.it/xmd3aqgolakybt-->
+        <p><%= flg[9].eigen %><br>
+           <%= flg[9].ort %> <br>
+           <%= flg[9].staerke %><br>
+           <%= flg[9].schwaeche %> <br>
+           <%= flg[9].tipps %></p><br>
+          </div>
+
+   
+
+<script>//Quelle:https://www.w3schools.com/howto/howto_js_tabs.asp
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+</body>
+
+</html>

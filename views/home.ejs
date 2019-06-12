@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Prodigium</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href='startseite.css' rel='stylesheet'>
+      <link href="boX.css" rel="stylesheet" type="text/css">
+      <link href='main.css' rel='stylesheet'>
+
+    </head>
+
+    <body>
+       <header>
+
+       </div>
+       <div class="wrapper" id="oben">
+         <div class="logo">
+           <a href="/home"><img src="log.png" alt="logo"></a>
+          </div>
+          <ul class="nav-area">
+            <li><a href="/home">Startseite</a></li>
+            <li class="dropdown">
+              <a href="#section1" class="dropbtn">Prodigium-Box</a>
+              <div class="dropdown-content">
+                <a href="/daemonen">Dämonen</a>
+                <a href="/natur">Naturgeister</a>
+                <a href="/Wasserwesen">Wasserwesen</a>
+                <a href="/Flugwesen">Flugwesen</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="/konto" class="dropbtn">Mein Profil</a>
+              <div class="dropdown-content">
+                <a href="/konto">Konto</a>
+              </div>
+            </li>
+            <li><a href="#credits">Credits</a></li> 
+            
+            <% if (isLoggedIn) { %> 
+              <form action="/logout" method="POST">
+                
+                <button class ="buttonANAB" type="submit">Abmelden</button>
+              
+              </form>
+              <% } else { %>
+                <form action="/login" method="POST">
+                  
+                  <button class ="buttonANAB" type="submit">Anmelden</button>
+               
+                </form>
+                <% } %>
+              </ul>
+            </div>
+            
+            <div class="welcome-text">
+              <h1>Taucht ein in die Welt von Prodigium!</h1>
+              <a href="#section2">Über die Seite</a>
+            </div>
+          </header>
+          
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script>
+            $(document).ready(function(){
+              $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                   event.preventDefault();
+                   var hash = this.hash;
+                   $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                          }, 800, function(){
+                             window.location.hash = hash;
+                            });
+                          } 
+                        });
+                      });
+                      </script>
+                      </head>
+                      <body>
+                        
+                        <div class="main1" id="section1">
+                          <div class="scroll2">
+                            <a href="#oben">Zurück nach oben</a></div>
+                            <h2>Prodigium-Box</h2>
+                        
+                            <div class="responsive">
+                              <div class="gallery">
+                                 <a target="_blank" href="/daemonen">
+                                  <img src="daemonen1.png" alt="Cinque Terre" width="600" height="400">
+                                </a>
+                                <div class="desc">Dämonen</div>
+                              </div>
+                            </div>
+                        
+                        
+                        <div class="responsive">
+                          <div class="gallery">
+                            <a target="_blank" href="/Wasserwesen">
+                              <img src="Wasserwesen.png" alt="Forest" width="600" height="400">
+                            </a>
+                            <div class="desc">Wasserwesen</div>
+                          </div>
+                        </div>
+                        
+                        <div class="responsive">
+                          <div class="gallery">
+                            <a target="_blank" href="/Flugwesen">
+                              <img src="flugwesen1.png" alt="Northern Lights" width="600" height="400">
+                            </a>
+                            <div class="desc">Flugwesen</div>
+                          </div>
+                        </div>
+                        
+                        <div class="responsive">
+                          <div class="gallery">
+                            <a target="_blank" href="/natur">
+                              <img src="natur.png" alt="Mountains" width="600" height="400">
+                            </a>
+                            <div class="desc">Naturgeister</div>
+                          </div>
+                        </div>
+                        
+                        <div class="clearfix"></div></div>
+                    
+                    <div class="main2" id="section2">
+                      <div class="scroll">
+                        <a href="#section1">Zurück nach oben</a>
+                      </div>  
+                      <h2>Über die Seite</h2>
+                      <p>Dieses Projekt ist im Rahmen der Lehrveranstaltung "Angewandte Programmierung" an der HAW Hamburg entstanden. 
+                          Auf dieser Website geht es um die Ansammlung der Monster aus dem fiktiven Spiel "Prodigium". Darin beschreiben wir
+                          hilfreiche Informationen zu den Vorkommnissen, Eigenschaften, Stärken und Schwächen der verschiedenen Kreaturen.
+                          Die Monster-Arten umfassen Dämonen, Naturgeister, Wasserwesen und Flugwesen.
+                          Jedes Monster hat ihre individuelle Seite, auf der man auch Monster nach eigenen Interessen favorisieren kann.
+
+
+                          
+                          </p>
+                    </div>
+                    
+                    <div class="main2" id="credits">
+                        <div class="scroll2">
+                          <a href="#oben">Zurück nach oben</a>
+                        </div>  
+                        <h2>Credits</h2>
+                        <p>Mariko Toelke, 2415138</p>
+                        <p>Kristina Nguyen, 2422288</p>
+                      </div>
+                      
+      
+    </body>
+</html>

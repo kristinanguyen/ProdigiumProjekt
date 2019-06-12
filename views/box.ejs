@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="boX.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>//Quelle(smooth-scrool):https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+
+</head>
+<body>
+
+
+
+<div class="main" id="section1">
+    <h2 class="h1">Prodigium-Box</h2>
+
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="#">
+          <img src="dämonen1.png" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Dämonen</div>
+      </div>
+    </div>
+    
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="#">
+          <img src="Wasserwesen.png" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Wasserwesen</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="#">
+          <img src="flugwesen1.png" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Flugwesen</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="#">
+          <img src="natur.png" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Naturgeister</div>
+      </div>
+    </div>
+    
+    <div class="clearfix"></div></div>
+
+<div class="main" id="section2">
+  <h2>Section 2</h2>
+  <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+</div>
+
+</body>
+</html>

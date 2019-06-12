@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link href="main.css" rel="stylesheet" type="text/css">
+        
+    </head>
+
+    <body>
+        <div class="card"> 
+            <div class="close">
+                <a href="/home" aria-label="Close Account Info Modal Box">&times;</a></div><!--Quelle(Close):https://wesbos.com/times-html-entity-close-button/-->
+            <div class="headline">Prodigium</div>
+            
+            
+
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="Benutzername" required>
+
+                <input type="password" name="password" placeholder="Passwort" required>
+         
+                <button type="submit">Login</button>
+         
+                <span class="regis">Bereits ein Konto? <a href="/register">registrieren</a></span>
+               
+                
+            </form>
+        </div>
+    </body>
+</html>

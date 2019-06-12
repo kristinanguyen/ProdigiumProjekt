@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="card">
+                <div class="close">
+                        <a href="/home" aria-label="Close Account Info Modal Box">&times;</a></div>
+            <div class="headline">Werde ein Teil von Prodigium!</div>
+
+            <% if (error != null) { %> 
+                <div class="error"><%= error %></div>
+            <% } %>
+
+            <form action="/register" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="username" placeholder="Benutzername" required>
+
+                <input type="text" name="email" placeholder="E-Mail" required>
+
+                <input type="password" name="password" placeholder="Passwort" required>
+
+                <input type="password" name="passwordConfirm" placeholder="Passwort wiederholen" required>
+            
+                <button type="submit">Registrieren</button>
+              
+                <span class="regis">Bereits ein Konto? <a href="/login">login</a></span>
+            </form>
+            </form>
+        </div>
+    </body>
+</html>
